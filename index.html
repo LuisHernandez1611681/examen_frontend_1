@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prueba Frontend</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <div class="contenedor">
+    <!-- Botones -->
+    <div class="herramientas">
+      <div class="contenedor_buscador">
+        <select id="select_numero_orden"></select>
+        <!-- <input type="text" placeholder="Numero orden" id="input_search_numero_orden"> -->
+        <button id="btn_search_numero_orden">Buscar</button>
+      </div>
+
+      <div class="contenedor_nuevo_campo"> 
+        <button id="btn_nuevo_campo">Agregar</button>
+      </div>
+    </div>
+    <!-- Tabla -->
+    <div class="contenedor-tabla">
+      <table>
+        <thead>
+          <tr>
+            <th>Sku</th>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody id="table_tbody">
+          
+        </tbody>
+      </table>
+      <div class="payment">
+        <button id="btn_pagar">Pagar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de formulario -->
+  <div id="myModal" class="modal">
+
+    <!-- Contenido del modal -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close" id="btn_close">&times;</span>
+        <h2>Nuevo producto</h2>
+      </div>
+      <div class="modal-body">
+
+        <div class="formulario">
+          <input type="text" placeholder="Número de orden" id="inp_norden" disabled name="numero_orden">
+          <input type="text" placeholder="Sku" id="inp_sku" name="sku">
+          <input type="text" placeholder="Name" id="inp_name" name="name">
+          <input type="text" placeholder="Quantity" id="inp_quantity" name="quantity">
+          <input type="text" placeholder="Price" id="inp_price" name="price">
+        </div>
+
+        <div class="msgError">
+          <p>Nota: Los campos que estan marcados en rojo deben estar llenados para agregar un nuevo producto.</p>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button id="btn_guardar">Guardar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="myModalMsg" class="modal">
+
+    <!-- Contenido del modal -->
+    <div class="modal-content">
+      <div class="modal-header m-success">
+        <span class="close" id="btn_close_msg">&times;</span>
+        <h2>El Proceso fue exitoso</h2>
+      </div>
+      <div class="modal-body">
+        <p>Los productos fueron pagados exitosamente.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
