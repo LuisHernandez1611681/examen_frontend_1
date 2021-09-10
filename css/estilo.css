@@ -184,6 +184,8 @@ body {
 
 /* -------------- nuevo item */
 
+#inp_norden { display: none; }
+
 #myModal .formulario {
   padding: 10px;
   display: flex;

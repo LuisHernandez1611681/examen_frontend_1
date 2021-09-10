@@ -61,7 +61,7 @@ function get_orders(){
     type: 'GET',
     dataType : 'json',
     headers: {
-      'Authorization': '' // Token
+      'Authorization': 'Bearer ' // Token
     },
     success: function(json){
       data_orders = json;
@@ -143,4 +143,8 @@ function limpiarCampos(){
 // Boton para pagar
 $('#btn_pagar').on('click', function(){
   $('#myModalMsg').css('display', 'block');
+});
+
+$('.decimales').on('input', function () {
+  this.value = this.value.replace(/[^0-9,.]/g, '').replace(/,/g, '.');
 });
